@@ -1,0 +1,577 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-color: rgb(235, 225, 225);
+   color: rgb(78, 25, 25);
+   font-size: 16px;
+   font-family: cursive;
+   line-height: 1.6em;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   position: relative;
+}
+a,
+a:visited {
+   text-decoration: none;
+   color: black;
+}
+.links:hover,
+.links:active {
+   background: #ffe6e6;
+   color: rgb(117, 94, 94);
+   padding: 10px;
+   border-radius: 30%;
+}
+.active {
+   background-color: rgb(117, 94, 94);
+   padding: 10px;
+}
+header img {
+   width: 200px;
+   height: 200px;
+   margin-left: 0.5rem;
+   cursor: pointer;
+}
+header {
+   display: flex;
+   align-items: center;
+}
+header ul {
+   list-style: none;
+   font-variant: small-caps;
+   font-weight: bold;
+   flex-grow: 1;
+   display: inline-flex;
+   justify-content: space-around;
+   width: 70vw;
+}
+ul li {
+   font-size: 1.5em;
+}
+.see {
+   margin-top: 2em;
+   padding: 20px;
+}
+.see img {
+   width: 100%;
+   height: auto;
+   opacity: 0.85;
+   box-shadow: 10px 5px 4px lightgrey;
+}
+.see h2 {
+   text-transform: uppercase;
+   color: black;
+   z-index: 10;
+   position: absolute;
+   top: 35%;
+   right: 40%;
+   cursor: pointer;
+   transition: transform 4s;
+}
+h2:hover {
+   transform: scale(1.3, 1.3);
+}
+h2 span {
+   background: whitesmoke;
+   padding: 10px;
+   border-radius: 10px;
+}
+#low {
+   color: rgb(19, 4, 4);
+   position: absolute;
+   top: 39%;
+   right: 48.5%;
+   z-index: 10;
+   font-variant: small-caps;
+   font-size: 20px;
+   font-weight: bold;
+   transition: transform 3s;
+   cursor: pointer;
+}
+#low:hover {
+   transform: rotate(360deg);
+}
+#low span {
+   background: #ffe6e6;
+   padding: 10px;
+   border-radius: 10px;
+}
+#quot p {
+   padding: 10px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   transform: rotate(230deg);
+   width: 10%;
+   line-height: 1.7em;
+   position: absolute;
+   writing-mode: vertical-rl;
+   top: 18%;
+   text-shadow: 0 0 5px rgb(117, 94, 94);
+   left: 12%;
+}
+#quot2 p {
+   padding: 10px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   transform: rotate(-60deg);
+   width: 10%;
+   line-height: 1.4em;
+   position: absolute;
+   writing-mode: vertical-rl;
+   top: 28%;
+   text-shadow: 0 0 10px rgb(246, 181, 181);
+   right: 15%;
+}
+footer {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   border: 2px solid rgb(0, 0, 0);
+   margin: 20px;
+   gap: 2em;
+   background: rgba(0, 0, 0, 0.1);
+   box-shadow: 2px 5px 5px rgb(117, 94, 94);
+}
+footer img {
+   width: 250px;
+}
+footer h4 {
+   margin-top: 30px;
+   font-size: 2em;
+   position: relative;
+   animation: create 5s linear 0.1s infinite alternate;
+   line-height: 1.7em;
+}
+@keyframes create {
+   0% {
+      top: 0;
+      left: 0;
+      color: red;
+   }
+   25% {
+      top: 0;
+      left: 100px;
+      color: navy;
+   }
+   50% {
+      top: 100px;
+      left: 100px;
+      color: magenta;
+   }
+   75% {
+      top: 100px;
+      left: 0;
+      color: yellowgreen;
+   }
+   100% {
+      top: 0;
+      left: 0;
+      color: orange;
+   }
+}
+footer #copy {
+   grid-column: 2/3;
+   font-size: 1.3em;
+   text-align: center;
+   font-weight: bold;
+   margin-bottom: 15px;
+}
+footer .social {
+   margin: 7px;
+   border-radius: 40px;
+}
+.social p {
+   text-align: center;
+   font-size: 1.3em;
+   text-decoration: underline;
+}
+.social i {
+   color: rgb(117, 94, 94);
+   background: rgba(255, 255, 255, 0.4);
+   margin: 50px 30px 0 30px;
+   padding: 5px;
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   .active {
+      background-color: rgb(117, 94, 94);
+      padding: 5px;
+   }
+   header img {
+      width: 130px;
+      height: 130px;
+   }
+   ul li {
+      font-size: 0.6em;
+   }
+   .see {
+      margin-top: 2em;
+      padding: 20px;
+   }
+   .see img {
+      width: 100%;
+      height: 50vh;
+      opacity: 0.85;
+      box-shadow: 10px 5px 4px lightgrey;
+   }
+   .see h2 {
+      text-transform: uppercase;
+      font-size: 0.5em;
+      color: black;
+      z-index: 10;
+      position: absolute;
+      top: 26%;
+      left: 20%;
+      right: auto;
+      cursor: pointer;
+      transition: transform 4s;
+   }
+   h2:hover {
+      transform: scale(1.3, 1.3);
+   }
+   h2 span {
+      background: whitesmoke;
+      padding: 5px;
+      border-radius: 10px;
+   }
+   #low {
+      color: rgb(19, 4, 4);
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      right: auto;
+      z-index: 10;
+      font-variant: small-caps;
+      font-size: 10px;
+      font-weight: bold;
+      transition: transform 4s;
+      cursor: pointer;
+   }
+   #low:hover {
+      transform: rotate(360deg);
+   }
+   #low span {
+      background: #ffe6e6;
+      padding: 5px;
+      border-radius: 10px;
+   }
+
+   #quot p {
+      padding: 2px;
+      font-size: 0.5em;
+      font-weight: normal;
+      word-break: break-all;
+      transform: rotate(0deg);
+      width: 40%;
+      top: 33%;
+      line-height: 13px;
+      position: absolute;
+      margin-right: auto;
+      writing-mode: horizontal-tb;
+      left: auto;
+   }
+   #quot2 p {
+      padding: 2px;
+      font-size: 0.5rem;
+      font-weight: normal;
+      transform: rotate(0deg);
+      width: 30%;
+      line-height: 1em;
+      position: absolute;
+      writing-mode: horizontal-tb;
+      top: 11%;
+      right: 0;
+   }
+
+   footer {
+      display: grid;
+      grid-template-columns: 100px;
+      grid-template-rows: auto;
+   }
+   footer h4 {
+      font-size: 0.7em;
+      position: relative;
+      animation: create 5s linear 0.1s infinite alternate;
+      line-height: 1.7em;
+   }
+   @keyframes create {
+      0% {
+         top: 0;
+         left: 0;
+         color: red;
+      }
+      25% {
+         top: 0;
+         left: 10px;
+         color: navy;
+      }
+      50% {
+         top: 20px;
+         left: 10px;
+         color: magenta;
+      }
+      75% {
+         top: 20px;
+         left: 0;
+         color: yellowgreen;
+      }
+      100% {
+         top: 0;
+         left: 0;
+         color: orange;
+      }
+   }
+   footer img {
+      width: 150px;
+      display: block;
+   }
+   .social {
+      width: 80vw;
+   }
+   footer .social p {
+      font-size: 0.7em;
+   }
+   footer .social i {
+      font-size: 0.9em;
+      margin: 20px 15px;
+   }
+   footer #copy {
+      font-size: 0.5em;
+      grid-column: 1/3;
+   }
+}
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   .active {
+      background-color: rgb(117, 94, 94);
+      padding: 10px;
+   }
+   header img {
+      width: 150px;
+      height: 150px;
+   }
+   header li {
+      font-size: 1em;
+   }
+   .see {
+      margin-top: 3em;
+      padding: 20px;
+   }
+   .see img {
+      width: 100%;
+      opacity: 0.85;
+      box-shadow: 10px 5px 4px lightgrey;
+   }
+   .see h2 {
+      text-transform: uppercase;
+      font-size: 1em;
+      color: black;
+      z-index: 10;
+      position: absolute;
+      top: 35%;
+      left: 25%;
+      right: auto;
+      cursor: pointer;
+      transition: transform 4s;
+   }
+   h2:hover {
+      transform: scale(1.1, 1.1);
+   }
+   h2 span {
+      background: whitesmoke;
+      padding: 10px;
+      border-radius: 10px;
+   }
+   #low {
+      color: rgb(19, 4, 4);
+      position: absolute;
+      top: 39%;
+      left: 42%;
+      right: auto;
+      z-index: 10;
+      font-variant: small-caps;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 4s;
+      cursor: pointer;
+   }
+   #low:hover {
+      transform: rotate(360deg);
+   }
+   #low span {
+      background: #ffe6e6;
+      padding: 10px;
+      border-radius: 10px;
+   }
+
+   #quot p {
+      padding: 7px;
+      font-size: 1em;
+      transform: rotate(0deg);
+      width: 30%;
+      top: 23%;
+      line-height: 16px;
+      margin-right: auto;
+      writing-mode: horizontal-tb;
+      left: auto;
+   }
+   #quot2 p {
+      padding: 7px;
+      font-size: 1rem;
+      font-weight: bold;
+      transform: rotate(0deg);
+      width: 30%;
+      line-height: 1em;
+      position: absolute;
+      writing-mode: horizontal-tb;
+      top: 21%;
+      right: 0;
+   }
+   footer {
+      margin: 5px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+      box-shadow: 7px 5px 2px grey;
+   }
+   footer img {
+      width: 150px;
+   }
+   footer h4 {
+      margin-top: 0px;
+      font-size: 1.5em;
+      position: relative;
+      animation: create 2s linear 0.1s infinite alternate;
+      line-height: 1.7em;
+   }
+   @keyframes create {
+      from {
+         top: 0px;
+      }
+      to {
+         top: 10px;
+      }
+   }
+   footer .social i {
+      margin: 20px 35px;
+      padding: 5px;
+   }
+   footer #copy {
+      grid-column: 1/-1;
+   }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+   .see h2 {
+      text-transform: uppercase;
+      color: black;
+      z-index: 10;
+      position: absolute;
+      top: 35%;
+      right: 25%;
+      cursor: pointer;
+      transition: transform 4s;
+   }
+   h2:hover {
+      transform: scale(1.2, 1.2);
+   }
+   h2 span {
+      background: whitesmoke;
+      padding: 10px;
+      border-radius: 10px;
+   }
+   #low {
+      position: absolute;
+      top: 40%;
+      right: 45.5%;
+   }
+   #quot p {
+      padding: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transform: rotate(230deg);
+      width: 5ch;
+      line-height: 1.4em;
+      position: absolute;
+      writing-mode: vertical-rl;
+      top: 10%;
+      text-shadow: 0 0 5px rgb(117, 94, 94);
+      left: 15%;
+   }
+   #quot2 p {
+      padding: 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      transform: rotate(-90deg);
+      width: 3%;
+      line-height: 1.2em;
+      position: absolute;
+      writing-mode: vertical-rl;
+      top: 15%;
+      text-shadow: 0 0 10px rgb(246, 181, 181);
+      right: 20%;
+   }
+   footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 2px solid rgb(0, 0, 0);
+      margin: 20px;
+      gap: 2em;
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 5px 5px rgb(117, 94, 94);
+   }
+   footer img {
+      width: 200px;
+   }
+   footer h4 {
+      margin-top: 30px;
+      font-size: 1.5em;
+   }
+   @keyframes create {
+      0% {
+         top: 0;
+         left: 0;
+         color: red;
+      }
+      25% {
+         top: 0;
+         left: 50px;
+         color: navy;
+      }
+      50% {
+         top: 50px;
+         left: 50px;
+         color: magenta;
+      }
+      75% {
+         top: 50px;
+         left: 0;
+         color: yellowgreen;
+      }
+      100% {
+         top: 0;
+         left: 0;
+         color: orange;
+      }
+   }
+   footer #copy {
+      grid-column: 1/7;
+      font-size: 1.3em;
+      text-align: center;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+   }
+   footer .social {
+      margin: 7px;
+      border-radius: 40px;
+   }
+   .social p {
+      text-align: center;
+      font-size: 1.3em;
+      text-decoration: underline;
+   }
+   .social i {
+      margin: 50px 10px 20px 20px;
+      padding: 3px;
+   }
+}
